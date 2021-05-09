@@ -1,7 +1,7 @@
-body{
+html body{
   margin: 0;
   padding: 0;
-  background-color: rgb(33, 178, 189);
+  background-color: black;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -20,9 +20,6 @@ body{
    }
 }
 
-.float-left{ 
-  float: left
-}
 
 .navbar{
   display: flex;
@@ -30,21 +27,13 @@ body{
   align-items: center;
   height: 75px;
   background-color: white;
+  border: 2px solid black;
 }
 
 .navItems{
   cursor: pointer;
   border: 2px solid pink;
   margin: 5px;
-}
-
-.button{
-  width: 120px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50px;
-  cursor: pointer;
-  margin: 10px;
 }
 
 .redbutton{ 
@@ -63,15 +52,24 @@ body{
   left: 10px;
 }
 
-.content{
+.home-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid green;
+  background-image: url(./schedule-pic.jpeg) no-repeat center center fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: black;
+  background-blend-mode: exclusion;
+  height: 100vh;
 }
 
-.page-center{
-  position: absolute;
-  top: 50%
+.card{
+  max-width: 500px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(+50%);
 }
