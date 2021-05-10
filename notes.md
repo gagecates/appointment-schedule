@@ -1,0 +1,1 @@
+Fix env variable issue with auth config file..... currently using hardcoded API key. need to use .env variable. 

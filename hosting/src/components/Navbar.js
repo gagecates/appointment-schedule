@@ -1,11 +1,10 @@
 import React from 'react'
-import Logout from './Logout'
 
-export default function Navbar() {
+export default function Navbar({ logout }) {
     return (
-        <div className='navbar'>
+        <div className='nav'>
             <h1 className='title'>Let Me Check My Schedule</h1>
-            <Logout/>  
+            <div onClick={logout}className='logout-btn'>Logout</div>
         </div>
     )
 }

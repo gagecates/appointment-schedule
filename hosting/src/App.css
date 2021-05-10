@@ -1,8 +1,11 @@
 html body{
   margin: 0;
   padding: 0;
-  background-color: black;
   font-family: 'Raleway', sans-serif;
+}
+
+html, body, #root, .App {
+  height: 100%;
 }
 
 .fadeImage{
@@ -20,14 +23,17 @@ html body{
    }
 }
 
-
-.navbar{
+.nav{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 75px;
-  background-color: white;
-  border: 2px solid black;
+  border-bottom: 1px solid black;
+}
+
+.title{
+  position: absolute;
+  left: 10px;
 }
 
 .navItems{
@@ -36,40 +42,31 @@ html body{
   margin: 5px;
 }
 
-.redbutton{ 
-  background-color: red;
-  color: white;
-}
-
-.redbutton:hover{
-  background-color: white;
-  color: red;
-  border: 1px solid red;
-}
-
-.title{
-  position: absolute;
-  left: 10px;
-}
-
-.home-content{
+.flex-center{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 1px solid green;
-  background-image: url(./schedule-pic.jpeg) no-repeat center center fixed;
+  justify-content: center;
+}
+
+.whole-page{
+  height: 100%
+}
+
+.with-nav{
+  height: calc(100% - 75px)
+}
+
+.background-image{
+  background-image: url("schedule-pic.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: black;
   background-blend-mode: exclusion;
-  height: 100vh;
 }
 
-.card{
-  max-width: 500px;
-  margin: auto;
-  top: 50%;
-  transform: translateY(+50%);
+.logout-btn{
+  cursor: pointer;
+  margin-right: 10px;
 }
