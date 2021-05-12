@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react"
-import { Button, Alert } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 import Navbar from './Navbar'
 import Firebase from 'firebase'
 
 export default function Dashboard() {
-  const [error, setError] = useState("")
   const [apts, setApts] = useState([])
   const [aptRequests, setAptRequests] = useState([])
-  const { currentUser, logout } = useAuth()
-  const history = useHistory()
-  //<strong>Email:</strong> {currentUser.email}
+  const { currentUser } = useAuth()
 
   useEffect(() => {
     const getUserData = Firebase.functions().httpsCallable('getUserData');
@@ -26,7 +23,6 @@ export default function Dashboard() {
     console.log(`error: ${JSON.stringify(error)}`);
     });
   },[]);
-
 
   const acceptAptHandler = (newApt) => {
     const newAptRequests = aptRequests.filter(apt => apt !== newApt)

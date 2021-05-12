@@ -28,7 +28,7 @@ export default function Login() {
 
   return (
     <>
-      <div className='background-image flex-center whole-page'>
+      <div className='background-image flex-center justify-center whole-page'>
         <Card style={{ width: '60vw'}}>
           <Card.Body>
             <h2 className="text-center mb-4">Log In</h2>

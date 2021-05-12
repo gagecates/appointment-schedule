@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useAuth } from "../contexts/AuthContext"
-import { Button, Alert } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Select } from 'semantic-ui-react'
@@ -23,13 +23,12 @@ const defaultTimes = [
 
 
 export default function AddAppointment() {
-    const { currentUser, logout } = useAuth()
+    const { currentUser } = useAuth()
     const [users, setUsers] = useState([])
     const [modal, setModal] = useState(false)
-    const [availability, setAvailability] = useState(defaultTimes)
+    const [availability] = useState(defaultTimes)
     const [timeChosen, setTimeChosen] = useState('7:00am')
     const [date, setDate] = useState(new Date())
-    const [curApts, setCurApts] = useState([])
     const [userId, setUserId] = useState('')
     const [userEmail, setUserEmail] = useState('')
 
@@ -46,17 +45,11 @@ export default function AddAppointment() {
                 }
             })
             const newUsers = users.filter(user => user.email !== currentUser.email)
-
             setUsers(newUsers);
         }).catch((error) => {
         console.log(`error: ${JSON.stringify(error)}`);
         });
     },[]);
-
-    const getAppointmentsFor = userEmail => {
-        const user = users.filter(user => user.email === userEmail)
-        return user[0].apts;
-    };
 
     const newAppointment = ((e, id, email) => {
         setModal(true);
@@ -91,6 +84,7 @@ export default function AddAppointment() {
         console.log(`error: ${JSON.stringify(error)}`);
         });
         setModal(false)
+        alert('Your appointment request has been submitted')
     });
 
 
