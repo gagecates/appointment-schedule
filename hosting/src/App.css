@@ -70,3 +70,51 @@ html, body, #root, .App {
   cursor: pointer;
   margin-right: 10px;
 }
+
+.apts-container{
+  height: 60%;
+}
+
+.apts-content{
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100%;
+  width: 85%;
+}
+
+.users-container{
+  width: 70vw;
+}
+
+.user-container{
+  text-align: right;
+  margin: 5px;
+
+}
+
+.modalz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position:fixed;
+  background: rgb(250, 249, 249);
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
