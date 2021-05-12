@@ -8,6 +8,9 @@ export default function Navbar() {
     return (
         <div className='nav'>
             <h1 className='title'>Let Me Check My Schedule</h1>
+            <Link to="/" className="btn">
+              Home
+            </Link>
             <Link to="/update-profile" className="btn">
               Update Profile
             </Link>

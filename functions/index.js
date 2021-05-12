@@ -10,7 +10,7 @@ exports.newUserSignup = functions.auth.user().onCreate((user) => {
     id: user.uid,
     email: user.email,
     appointments: [],
-    new_apt: [],
+    newApt: [],
   });
 });
 
@@ -48,5 +48,45 @@ exports.getUsers = functions.https.onCall((data, context) => {
           users.push(doc.data());
         });
         return users;
+      });
+});
+
+exports.addNewAppointment = functions.https.onCall((data, context) => {
+  const userRef = admin.firestore().collection("users").doc(data.id);
+  return userRef.update({
+    newApt: admin.firestore.FieldValue.arrayUnion(data.apt),
+  })
+      .then(() => {
+        console.log("Document successfully updated!");
+      })
+      .catch((error) => {
+        console.error("Error updating document: ", error);
+      });
+});
+
+exports.updateAppointments = functions.https.onCall((data, context) => {
+  const userRef = admin.firestore().collection("users").doc(data.id);
+  return userRef.update({
+    appointments: admin.firestore.FieldValue.arrayUnion(data.apt),
+    newApt: data.newApt,
+  })
+      .then(() => {
+        console.log("Appointments successfully updated!");
+      })
+      .catch((error) => {
+        console.error("Error updating document: ", error);
+      });
+});
+
+exports.updateNewAppointments = functions.https.onCall((data, context) => {
+  const userRef = admin.firestore().collection("users").doc(data.id);
+  return userRef.update({
+    newApt: data.newApt,
+  })
+      .then(() => {
+        console.log("Appointments successfully updated!");
+      })
+      .catch((error) => {
+        console.error("Error updating document: ", error);
       });
 });
