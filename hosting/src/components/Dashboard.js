@@ -10,7 +10,9 @@ export default function Dashboard() {
   const [aptRequests, setAptRequests] = useState([])
   const { currentUser } = useAuth()
 
+
   useEffect(() => {
+    // get curent users appointments and appointment requests on render
     const getUserData = Firebase.functions().httpsCallable('getUserData');
      getUserData({
       data: null
@@ -24,31 +26,8 @@ export default function Dashboard() {
     });
   },[]);
 
-  const acceptAptHandler = (newApt) => {
-    const newAptRequests = aptRequests.filter(apt => apt !== newApt)
-    alert('Updated your appointments')
-    const updateApt = Firebase.functions().httpsCallable('updateAppointments');
-        updateApt({
-            id: currentUser.uid,
-            apt: newApt,
-            newApt: newAptRequests
-        }).then((result) => {
-            const getUserData = Firebase.functions().httpsCallable('getUserData');
-            console.log('updated appointments and new appointments')
-            getUserData({
-              data: null
-            }).then((result) => {
-                setApts(result.data.appointments);
-                setAptRequests(result.data.newApt)
-            }).catch((error) => {
-            console.log(`error fetching userData`);
-            });
-        }).catch((error) => {
-        console.log(`error updating appoitments`);
-        });
-  };
-
-  const declineAptHandler = (newApt) => {
+  const updateNewApts = (newApt) => {
+    // updates new appointments array in database
     const newAptRequests = aptRequests.filter(apt => apt !== newApt)
     setAptRequests(newAptRequests);
     const updateNewApt = Firebase.functions().httpsCallable('updateNewAppointments');
@@ -62,6 +41,40 @@ export default function Dashboard() {
         });
   };
 
+  const acceptAptHandler = (newApt, userId) => {
+    const newAptRequests = aptRequests.filter(apt => apt !== newApt)
+    // update current users appointments
+    const updateApt = Firebase.functions().httpsCallable('updateAppointments');
+        updateApt({
+            id: currentUser.uid,
+            apt: newApt
+        }).then((result) => {
+            alert('Updated your appointments')
+            // update other users appointments
+            const usersNewApt = Object.assign({}, newApt, {email: currentUser.email});
+            updateApt({
+              id: userId,
+              apt: usersNewApt
+            }).then((result) => {
+              // update current users appointment requests
+              updateNewApts(newApt);
+              const getUserData = Firebase.functions().httpsCallable('getUserData');
+              getUserData({
+                data: null
+              }).then((result) => {
+                  setApts(result.data.appointments);
+                  setAptRequests(result.data.newApt)
+              }).catch((error) => {
+              console.log(`error fetching userData`);
+              })
+            }).catch((error) => {
+              console.log(`error updating users appoitments`);
+              })
+        }).catch((error) => {
+        console.log(`error updating current users appoitments`);
+        });
+  };
+
   const newApts = aptRequests.map(apt => {
     return(
       <div className='new-apt-container'>
@@ -71,13 +84,13 @@ export default function Dashboard() {
         </div>
         <Button 
           className="m-4"
-          onClick={e => acceptAptHandler(apt)}
+          onClick={e => acceptAptHandler(apt, apt.id)}
         >
           Accept Appointment
         </Button>
         <Button 
           className="m-4"
-          onClick={e => declineAptHandler(apt)}
+          onClick={e => updateNewApts(apt)}
         >
           Decline Appointment
         </Button>

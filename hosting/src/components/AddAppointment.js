@@ -34,6 +34,7 @@ export default function AddAppointment() {
 
 
     useEffect(() => {
+        // get all users
         const getUsers = Firebase.functions().httpsCallable('getUsers');
         getUsers().then((result) => {
             console.log(result.data);
@@ -51,11 +52,11 @@ export default function AddAppointment() {
         });
     },[]);
 
+    // opens modal to set appointment time
     const newAppointment = ((e, id, email) => {
         setModal(true);
         setUserId(id)
         setUserEmail(email)
-        //const currApts = getAppointmentsFor(e.target.value);
     });
 
     const closeModal = () => {
@@ -64,6 +65,7 @@ export default function AddAppointment() {
     };
 
     const handleAptSubmit = ((e) => {
+        // format date
         const month = date.getUTCMonth() + 1;
         const day = date.getUTCDate();
         const year = date.getUTCFullYear();
@@ -71,9 +73,10 @@ export default function AddAppointment() {
         const formattedDate = month + '/' + day + '/' + year
         const apt = {
             apt: timeChosen + " " + formattedDate,
-            email: currentUser.email
+            email: currentUser.email,
+            id: currentUser.uid
         }
-
+        // submit new appointment info to database
         const addApt = Firebase.functions().httpsCallable('addNewAppointment');
         addApt({
             id: userId,

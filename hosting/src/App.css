@@ -9,21 +9,6 @@ html, body, #root, .App {
   height: 100%;
 }
 
-.fadeImage{
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-   }
-}
-
 .nav{
   display: flex;
   justify-content: flex-end;
@@ -133,4 +118,10 @@ html, body, #root, .App {
   display: flex;
   align-items: center;
   margin-top: 10px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .title{
+    display: none;
+  }
 }

@@ -21,6 +21,7 @@ exports.userDeleted = functions.auth.user().onDelete((user) => {
   return doc.delete();
 });
 
+// get logged in users appointment data
 exports.getUserData = functions.https.onCall((data, context) => {
   const id = context.auth.uid;
   const promise = admin.firestore().collection("users").doc(id).get();
@@ -38,7 +39,8 @@ exports.getUserData = functions.https.onCall((data, context) => {
         console.log("Error getting document", err);
       });
 });
-
+ 
+// get all users
 exports.getUsers = functions.https.onCall((data, context) => {
   const promise = admin.firestore().collection("users").get();
   return promise
@@ -51,6 +53,7 @@ exports.getUsers = functions.https.onCall((data, context) => {
       });
 });
 
+// add a new appointment request 
 exports.addNewAppointment = functions.https.onCall((data, context) => {
   const userRef = admin.firestore().collection("users").doc(data.id);
   return userRef.update({
@@ -64,11 +67,11 @@ exports.addNewAppointment = functions.https.onCall((data, context) => {
       });
 });
 
+// update users appointments
 exports.updateAppointments = functions.https.onCall((data, context) => {
   const userRef = admin.firestore().collection("users").doc(data.id);
   return userRef.update({
     appointments: admin.firestore.FieldValue.arrayUnion(data.apt),
-    newApt: data.newApt,
   })
       .then(() => {
         console.log("Appointments successfully updated!");
@@ -78,6 +81,7 @@ exports.updateAppointments = functions.https.onCall((data, context) => {
       });
 });
 
+// update logged in users appointment requests
 exports.updateNewAppointments = functions.https.onCall((data, context) => {
   const userRef = admin.firestore().collection("users").doc(data.id);
   return userRef.update({
