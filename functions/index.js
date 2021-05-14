@@ -39,7 +39,7 @@ exports.getUserData = functions.https.onCall((data, context) => {
         console.log("Error getting document", err);
       });
 });
- 
+
 // get all users
 exports.getUsers = functions.https.onCall((data, context) => {
   const promise = admin.firestore().collection("users").get();
@@ -53,7 +53,7 @@ exports.getUsers = functions.https.onCall((data, context) => {
       });
 });
 
-// add a new appointment request 
+// add a new appointment request
 exports.addNewAppointment = functions.https.onCall((data, context) => {
   const userRef = admin.firestore().collection("users").doc(data.id);
   return userRef.update({

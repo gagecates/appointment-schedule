@@ -1,0 +1,165 @@
+[debug] [2021-05-14T17:07:00.335Z] ----------------------------------------------------------------------
+[debug] [2021-05-14T17:07:00.337Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-05-14T17:07:00.337Z] CLI Version:   9.10.0
+[debug] [2021-05-14T17:07:00.337Z] Platform:      darwin
+[debug] [2021-05-14T17:07:00.337Z] Node Version:  v14.15.4
+[debug] [2021-05-14T17:07:00.338Z] Time:          Fri May 14 2021 11:07:00 GMT-0600 (Mountain Daylight Time)
+[debug] [2021-05-14T17:07:00.338Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-14T17:07:00.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-14T17:07:00.343Z] > authorizing via signed-in user (gagecates10@gmail.com)
+[debug] [2021-05-14T17:07:00.344Z] [iam] checking project pocket-rn-7b032 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-05-14T17:07:00.345Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-14T17:07:00.345Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-14T17:07:00.920Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 14 May 2021 17:07:01 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:00.968Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-rn-7b032:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-05-14T17:07:01.485Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=181","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:01.486Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/pocket-rn-7b032/serviceAccounts/pocket-rn-7b032@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-05-14T17:07:02.173Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:02.175Z] > refreshing access token with scopes: []
+[debug] [2021-05-14T17:07:02.175Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-14T17:07:02.675Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 14 May 2021 17:07:02 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:02.724Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pocket-rn-7b032 [none]
+[debug] [2021-05-14T17:07:03.727Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pocket-rn-7b032 200
+[debug] [2021-05-14T17:07:03.727Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pocket-rn-7b032 {"projectId":"pocket-rn-7b032","projectNumber":"1015467175985","displayName":"Pocket RN","name":"projects/pocket-rn-7b032","resources":{"hostingSite":"pocket-rn-7b032","storageBucket":"pocket-rn-7b032.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[info] 
+[info] === Deploying to 'pocket-rn-7b032'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script. 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2021-05-14T17:07:06.152Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-14T17:07:06.152Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-14T17:07:06.665Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 14 May 2021 17:07:06 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:06.710Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/pocket-rn-7b032:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      allow read, write: if false;\n    }\n  }\n}"}]}}
+[debug] [2021-05-14T17:07:07.586Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-05-14T17:07:08.424Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/pocket-rn-7b032/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-05-14T17:07:08.425Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/pocket-rn-7b032/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-05-14T17:07:08.425Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/pocket-rn-7b032/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-05-14T17:07:09.281Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-05-14T17:07:09.326Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-05-14T17:07:09.327Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:09.328Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pocket-rn-7b032/adminSdkConfig  
+ 
+[debug] [2021-05-14T17:07:09.922Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2021-05-14T17:07:09.924Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/pocket-rn-7b032/configs  
+ 
+[debug] [2021-05-14T17:07:10.641Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (33.69 KB) for uploading 
+[debug] [2021-05-14T17:07:10.809Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "build:watch": "tsc -w"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-05-14T17:07:10.809Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/pocket-rn-7b032/locations/-/functions  
+ 
+[debug] [2021-05-14T17:07:11.834Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:11.837Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pocket-rn-7b032/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-05-14T17:07:13.165Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:13.168Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/pocket-rn-7b032/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-05-14T17:07:13.168Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/pocket-rn-7b032/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-05-14T17:07:13.802Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:13.803Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/pocket-rn-7b032/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-05-14T17:07:13.920Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:13.921Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/pocket-rn-7b032/rulesets/d90663cf-ebbe-4216-9d2f-fa09b6cc981a  
+ 
+[debug] [2021-05-14T17:07:14.386Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2021-05-14T17:07:14.717Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[debug] [2021-05-14T17:07:14.719Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/pocket-rn-7b032/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-05-14T17:07:15.827Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 14 May 2021 17:07:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:15.828Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-5c0c333a-7ec9-4b34-9a9b-f3b0ac4fbe43/6f6abf58-163a-44e0-abe2-4c6c43d6b313.zip?GoogleAccessId=service-1015467175985@gcf-admin-robot.iam.gserviceaccount.com&Expires=1621013835&Signature=uMtQxD2c2GFkrpEJFclFZtiE%2BtgzfQrU8ZKGdZf8wdTZ7dlBpPoKcpK1mkhaccGSiGwVaNtN9b5W3WgxwTWpPTLgVbuEKwClqaV1yGzkKehJRXnXxQTQvlnmKYmiarWsgc2AXECbOhv95YoAK6tV3271aLTLKyUXLHrr%2FBknR%2Bm2ryJ3%2B3IpZvwVMNR8xQdJJGlcRYFXkUl8cwTGKtF1DTVH0NN7PuknteO8bryT2nRWwvtCmIV2belFUD26RJVJC51AUTRrtB8dFOO5yiCgvu2JXiXmnk3KKgXAqjuogatBSORWK07%2F1ia3BqDuR%2FhXAcntqZMj6Ix21kKGzYAnRw%3D%3D  
+ <request body omitted>
+[debug] [2021-05-14T17:07:16.651Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ABg5-UxbkLlk12VNBHmoU4DoRabAnjvkqKvMav0g8vF8sJd2Qdnn-Ozk_cEEMnLKRcc9s1Oo98V-DiadJ5vnLgepknI","etag":"\"c9c6b9ceb8f7b99c251480cf643b523b\"","x-goog-generation":"1621012036841897","x-goog-metageneration":"1","x-goog-hash":"crc32c=PLhltQ==, md5=yca5zrj3uZwlFIDPZDtSOw==","x-goog-stored-content-length":"34499","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Fri, 14 May 2021 17:07:16 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[pocket-rn-7b032]: beginning deploy... 
+[info] i  hosting[pocket-rn-7b032]: found 17 files in ./hosting/build 
+[debug] [2021-05-14T17:07:17.218Z] > refreshing access token with scopes: []
+[debug] [2021-05-14T17:07:17.219Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-14T17:07:17.220Z] [hosting] hash cache [aG9zdGluZy9idWlsZA] stored for 17 files
+[debug] [2021-05-14T17:07:17.220Z] [hosting][hash queue][FINAL] {"max":556,"min":7,"avg":51.8235294117647,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":560}
+[debug] [2021-05-14T17:07:17.831Z] <<< HTTP RESPONSE 200 {"date":"Fri, 14 May 2021 17:07:17 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-14T17:07:17.872Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/pocket-rn-7b032/versions/26019fca2a42aaa5:populateFiles [none]
+[debug] [2021-05-14T17:07:17.872Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pocket-rn-7b032/versions/26019fca2a42aaa5:populateFiles {"files":{"/asset-manifest.json":"9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11","/index.html":"9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.a9947723.chunk.css":"f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9","/static/css/main.a9947723.chunk.css.map":"4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b","/static/js/2.ec4ee004.chunk.js.LICENSE.txt":"16b9861e0b6e5e6a34462553eb35a0cd1f25540aba6b76049e3edc2e58e58ffe","/static/js/main.89dec7e4.chunk.js":"2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667","/static/js/runtime-main.7df1a78b.js":"f0fb84cd5a90ffc079b9525d313097af5d591a52766d5b8639a640acca4d5982","/static/js/main.89dec7e4.chunk.js.map":"5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272","/static/js/runtime-main.7df1a78b.js.map":"59818ab25fb5bfb547b3ac1dd35a523b99af3d2df05ac57f50da964cc1ae7d29","/static/css/2.fbb5bf74.chunk.css":"aa33014d918653a2b352b1de1072981d57c91367fb9ec91b8d806c6d46d7980e","/static/css/2.fbb5bf74.chunk.css.map":"5bbf1fd47d7c798d3835e7421de7124682e6377929073e56ed99dae70f94f399","/schedule-pic.jpeg":"76921cfa3dfac8ab1c6fbfefd73653ff6a5264b07d627c1271cccd7f962d918a","/static/media/schedule-pic.a29595e9.jpeg":"76921cfa3dfac8ab1c6fbfefd73653ff6a5264b07d627c1271cccd7f962d918a","/static/js/2.ec4ee004.chunk.js":"bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d","/static/js/2.ec4ee004.chunk.js.map":"a0c0ff832abb269d4cb85896fd10511299b382a3972b678530c554fd8305f3d1"}}
+[debug] [2021-05-14T17:07:18.743Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/pocket-rn-7b032/versions/26019fca2a42aaa5:populateFiles 200
+[debug] [2021-05-14T17:07:18.743Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/pocket-rn-7b032/versions/26019fca2a42aaa5:populateFiles {"uploadRequiredHashes":["5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272","f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9","bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d","4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b","9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c","9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11","2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667","a0c0ff832abb269d4cb85896fd10511299b382a3972b678530c554fd8305f3d1"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files"}
+[debug] [2021-05-14T17:07:18.744Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272 [none]
+[debug] [2021-05-14T17:07:18.744Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272 [stream]
+[debug] [2021-05-14T17:07:18.745Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9 [none]
+[debug] [2021-05-14T17:07:18.745Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9 [stream]
+[debug] [2021-05-14T17:07:18.746Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d [none]
+[debug] [2021-05-14T17:07:18.746Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d [stream]
+[debug] [2021-05-14T17:07:18.747Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b [none]
+[debug] [2021-05-14T17:07:18.747Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b [stream]
+[debug] [2021-05-14T17:07:18.747Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c [none]
+[debug] [2021-05-14T17:07:18.747Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c [stream]
+[debug] [2021-05-14T17:07:18.748Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11 [none]
+[debug] [2021-05-14T17:07:18.748Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11 [stream]
+[debug] [2021-05-14T17:07:18.748Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667 [none]
+[debug] [2021-05-14T17:07:18.748Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667 [stream]
+[debug] [2021-05-14T17:07:18.749Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/a0c0ff832abb269d4cb85896fd10511299b382a3972b678530c554fd8305f3d1 [none]
+[debug] [2021-05-14T17:07:18.749Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/a0c0ff832abb269d4cb85896fd10511299b382a3972b678530c554fd8305f3d1 [stream]
+[debug] [2021-05-14T17:07:18.749Z] [hosting][populate queue][FINAL] {"max":1526,"min":1526,"avg":1526,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1531}
+[debug] [2021-05-14T17:07:18.749Z] [hosting] uploads queued: 8
+[debug] [2021-05-14T17:07:19.798Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272 200
+[debug] [2021-05-14T17:07:19.798Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/5e1cd6f3f63c8a2783c192016c2f48f96b5ebc0e8284070a6661adc8ea27d272 [stream]
+[debug] [2021-05-14T17:07:20.157Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667 200
+[debug] [2021-05-14T17:07:20.157Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/2bac76772dadbbbc45e447a5676dde826c4a7a5428f866aa5ad46a708e51a667 [stream]
+[debug] [2021-05-14T17:07:20.310Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b 200
+[debug] [2021-05-14T17:07:20.310Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/4bb8a11dd067f80c35daabf3589296bebdb0ff9c2b553612f43f848b0979494b [stream]
+[debug] [2021-05-14T17:07:20.334Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9 200
+[debug] [2021-05-14T17:07:20.334Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/f5e87d9972fc166e861110b1cf25b2050f12589886a8add4b731d4c2446f7be9 [stream]
+[debug] [2021-05-14T17:07:20.503Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11 200
+[debug] [2021-05-14T17:07:20.503Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9e944580c2dca261217f52a9cdc94b751e06fc2e647ce345f4a0a071b455ef11 [stream]
+[debug] [2021-05-14T17:07:20.632Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c 200
+[debug] [2021-05-14T17:07:20.633Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/9ac963947188e32a022b475106bdf75281f84625e4400b031a7a84c961800f1c [stream]
+[debug] [2021-05-14T17:07:23.719Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d 200
+[debug] [2021-05-14T17:07:23.719Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pocket-rn-7b032/versions/26019fca2a42aaa5/files/bca21549b6e02c66cf4e8715d12ddb082898cbbd89a0bbd72053d4e6d641be6d [stream]

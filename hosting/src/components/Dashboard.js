@@ -30,6 +30,7 @@ export default function Dashboard() {
     // updates new appointments array in database
     const newAptRequests = aptRequests.filter(apt => apt !== newApt)
     setAptRequests(newAptRequests);
+    console.log(newAptRequests)
     const updateNewApt = Firebase.functions().httpsCallable('updateNewAppointments');
         updateNewApt({
             id: currentUser.uid,
@@ -49,24 +50,37 @@ export default function Dashboard() {
             id: currentUser.uid,
             apt: newApt
         }).then((result) => {
-            alert('Updated your appointments')
             // update other users appointments
+            alert('Updated your appointments')
+            console.log('updated your appointments')
             const usersNewApt = Object.assign({}, newApt, {email: currentUser.email});
             updateApt({
               id: userId,
               apt: usersNewApt
             }).then((result) => {
-              // update current users appointment requests
-              updateNewApts(newApt);
-              const getUserData = Firebase.functions().httpsCallable('getUserData');
-              getUserData({
-                data: null
-              }).then((result) => {
-                  setApts(result.data.appointments);
-                  setAptRequests(result.data.newApt)
-              }).catch((error) => {
-              console.log(`error fetching userData`);
-              })
+                console.log('updated their appointments')
+                // update current users appointment requests
+                const newAptRequests = aptRequests.filter(apt => apt !== newApt)
+                setAptRequests(newAptRequests);
+                const updateNewApt = Firebase.functions().httpsCallable('updateNewAppointments');
+                updateNewApt({
+                    id: currentUser.uid,
+                    newApt: newAptRequests
+                }).then((result) => {
+                    // get current users data
+                    console.log('updated new appointments')
+                    const getUserData = Firebase.functions().httpsCallable('getUserData');
+                    getUserData({
+                      data: null
+                    }).then((result) => {
+                        setApts(result.data.appointments);
+                        setAptRequests(result.data.newApt)
+                    }).catch((error) => {
+                      console.log(`error fetching userData`);
+                      });
+                }).catch((error) => {
+                  console.log('error updating new appointments');
+                  });
             }).catch((error) => {
               console.log(`error updating users appoitments`);
               })
@@ -121,7 +135,7 @@ export default function Dashboard() {
       <div className="apts-container flex-center">
         <div className='apts-content flex-center'>
           {
-            (apts.length > 0) ? scheduledApts : 'You have no appointments'
+            (apts[0]) ? scheduledApts : 'You have no appointments'
           }
         </div>
       </div>
@@ -129,7 +143,7 @@ export default function Dashboard() {
         <h2 className='text-center'>Appointment Requests</h2>
         <div>
           {
-            (aptRequests.length > 0) ? newApts : 'You have no new appointment requests'
+            (aptRequests[0]) ? newApts : 'You have no new appointment requests'
           }
         </div>
       </div>
