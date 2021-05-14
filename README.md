@@ -8,7 +8,7 @@ The app is currently deployed and viewable here: [Pocket RN](https://pocket-rn-7
 
 ## Run Locally
 
-1. cd to the project root directory.
+1. Clone this repo or download the .zip file.
 2. cd to the hosting directory and install dependencies:
 ```
     npm i
