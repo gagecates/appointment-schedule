@@ -39,9 +39,9 @@ There are currently some generic users in the databse that you can use to set up
 
 To test the app, you can log in as any of the registers users by logging in with any of the following credentials:
 
-gagecates@mail.com  ||  gagecates
-rickjames@mail.com  ||  rickjames
-wordstuff@mail.com  ||  wordstuff
-kevinjames@mail.com ||  kevinjames
+1. gagecates@mail.com  ||  gagecates
+2. rickjames@mail.com  ||  rickjames
+3. wordstuff@mail.com  ||  wordstuff
+4. kevinjames@mail.com ||  kevinjames
 
 You can also create any users you please to test the app.
