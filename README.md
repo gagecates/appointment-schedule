@@ -4,7 +4,7 @@ This is a React/Firebase application that allows users to sign up and begin sche
 
 Boy was this a fun project. I really wish I had some more time to spend on it. Regardless, it was very enjoyable diving into Firebase with little to no prior experience. I really love how easy it can make things once you get the hang of it...
 
-The app is currently deployed and viewable here: [Pocket RN](pocket-rn-7b032.web.app)
+The app is currently deployed and viewable here: [Pocket RN](https://pocket-rn-7b032.web.app/)
 
 ## Run Locally
 
