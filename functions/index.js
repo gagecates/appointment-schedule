@@ -21,7 +21,7 @@ exports.userDeleted = functions.auth.user().onDelete((user) => {
   return doc.delete();
 });
 
-// get logged in users appointment data
+// get logged in user appointment data
 exports.getUserData = functions.https.onCall((data, context) => {
   const id = context.auth.uid;
   const promise = admin.firestore().collection("users").doc(id).get();
